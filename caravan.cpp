@@ -10,6 +10,9 @@
  * <your description here>
  *-----------------------------------------------------------------------------
 */
+
+#include "caravan.h"
+
 Caravan new_caravan()
 {
 }
