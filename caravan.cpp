@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------------
- *				HTBLA-Leonding / Class: <your class name here>
+ *				HTBLA-Leonding / Class: 2AHIF
  *-----------------------------------------------------------------------------
  * Exercise Number: #exercise_number#
  * File:			caravan.c
@@ -12,22 +12,17 @@
 */
 
 #include "caravan.h"
+#include "stdlib.h"
+#include "general.h"
 
-<<<<<<< HEAD
-/**
-* Initialisiert eine Karawane. D. h., dass es alle in der Karawane befindlichen Tiere aus der
-* Karawane entfernt und die Karawane als leer kennzeichnet.
-* @param caravan Die Karawane, welche initialisiert werden soll.
-*/
-=======
 struct CaravanImplementation{
-
+  Node* head;
+  int length = 0;
 };
 
->>>>>>> 24819418e590c8f0b783c3c47e11574bbddd8fa2
 Caravan new_caravan()
 {
-  return 0;
+  return (Caravan) malloc(sizeof(Caravan));
 }
 
 /**
@@ -35,15 +30,16 @@ Caravan new_caravan()
 */
 int get_length(Caravan caravan)
 {
-  return 0;
+  return caravan -> length;
 }
 
 /**
-* Entfern alle Tiere aus einer Karawane und löscht die Karawane.
+* Entfernt alle Tiere aus einer Karawane und löscht die Karawane.
 */
 void delete_caravan(Caravan caravan)
 {
-
+  //TO_DO
+  sfree(caravan);
 }
 
 /**
@@ -51,7 +47,7 @@ void delete_caravan(Caravan caravan)
 */
 void add_pack_animal(Caravan caravan, PackAnimal animal)
 {
-
+  //caravan -> length++
 }
 
 /**
@@ -94,5 +90,5 @@ void unload(Caravan caravan)
 */
 void optimize_load(Caravan caravan)
 {
-  
+
 }
