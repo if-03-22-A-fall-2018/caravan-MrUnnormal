@@ -47,7 +47,16 @@ void delete_caravan(Caravan caravan)
 */
 void add_pack_animal(Caravan caravan, PackAnimal animal)
 {
-  //caravan -> length++
+    if(caravan == 0 || animal == 0)
+    {
+      return;
+    }
+    Node* newNode = (Node*) malloc(sizeof(Node));
+    //animal -> caravan = caravan;
+    newNode -> pack_animal = animal;
+    newNode -> next = caravan -> head;
+    caravan -> head = newNode;
+    caravan -> length++;
 }
 
 /**

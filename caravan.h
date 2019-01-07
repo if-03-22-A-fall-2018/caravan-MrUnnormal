@@ -13,6 +13,7 @@
 #ifndef CARAVAN_H
 #define CARAVAN_H
 #include "pack_animal.h"
+#include "general.h"
 
 typedef struct _node{
   PackAnimal pack_animal;
