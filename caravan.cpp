@@ -13,11 +13,18 @@
 
 #include "caravan.h"
 
+<<<<<<< HEAD
 /**
 * Initialisiert eine Karawane. D. h., dass es alle in der Karawane befindlichen Tiere aus der
 * Karawane entfernt und die Karawane als leer kennzeichnet.
 * @param caravan Die Karawane, welche initialisiert werden soll.
 */
+=======
+struct CaravanImplementation{
+
+};
+
+>>>>>>> 24819418e590c8f0b783c3c47e11574bbddd8fa2
 Caravan new_caravan()
 {
   return 0;
