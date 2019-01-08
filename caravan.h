@@ -15,10 +15,7 @@
 #include "pack_animal.h"
 #include "general.h"
 
-typedef struct _node{
-  PackAnimal pack_animal;
-  struct _node* next;
-}Node;
+
 
 /**
 * Initialisiert eine Karawane. D. h., dass es alle in der Karawane befindlichen Tiere aus der
