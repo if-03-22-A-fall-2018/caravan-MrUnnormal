@@ -16,7 +16,7 @@
 #include "general.h"
 
 typedef struct _node{
-  PackAnimal pack_animal;
+  void* pack_animal;
   struct _node* next;
 }Node;
 
@@ -80,11 +80,31 @@ void add_pack_animal(Caravan caravan, PackAnimal animal)
 */
 void remove_pack_animal(Caravan caravan, PackAnimal animal)
 {
-  Node* currentNode = caravan -> head;
-  while(currentNode -> next != 0 && currentNode -> next -> pack_animal != animal)
+  if(caravan->head==0||animal==0)
   {
-    currentNode = currentNode -> next;
+    return;
   }
+  if(caravan->head->pack_animal==animal)
+  {
+    Node* toBeDeleted=caravan->head;
+    caravan->head=caravan->head->next;
+    sfree(toBeDeleted);
+  }
+  else{
+    Node* currNode=caravan->head;
+    while(currNode->next != 0 && currNode->next->pack_animal != animal)
+    {
+      currNode = currNode->next;
+    }
+
+    if(currNode->next != 0)
+    {
+      Node* toBeDeleted=currNode->next;
+      currNode->next=currNode->next->next;
+      sfree(toBeDeleted);
+    }
+  }
+  add_to_caravan(animal,0);
 }
 
 /**
